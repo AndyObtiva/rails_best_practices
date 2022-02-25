@@ -1,6 +1,6 @@
 # Rails Best Practices
 
-Authored by Andy Maleh (Two-time RailsConf Speaker, RubyConf/MagicRuby/MountainWest RubyConf Speaker, and Fukuoka Ruby 2022 Special Award Winner)
+**Authored by Andy Maleh (Two-time RailsConf Speaker, RubyConf/MagicRuby/MountainWest RubyConf Speaker, and Fukuoka Ruby 2022 Special Award Winner)**
 
 1. [Smalltalk-Style MVC with smart Views pulling data instead of dumb Views with Controllers pushing data](https://andymaleh.blogspot.com/2011/10/decoupling-views-from-controllers-in.html)
 1. [Rails Helper Presenters of Model information](https://andymaleh.blogspot.com/2011/10/decoupling-views-from-controllers-in.html)
