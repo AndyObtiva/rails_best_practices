@@ -2,7 +2,7 @@
 
 **Authored by Andy Maleh (Two-time RailsConf Speaker, RubyConf/MagicRuby/MountainWest RubyConf Speaker, and Fukuoka Ruby 2022 Special Award Winner)**
 
-1. [Smalltalk-Style MVC with smart Views pulling data instead of dumb Views with Controllers pushing data](https://andymaleh.blogspot.com/2011/10/decoupling-views-from-controllers-in.html)
+1. [Smalltalk-Style MVC with smart Views pulling data instead of dumb Views with Controllers pushing data](https://andymaleh.blogspot.com/2011/10/decoupling-views-from-controllers-in.html). In other words, avoid having Controllers that push tons of variables to the View (even if all those hooks were extracted to modules) as that results in very inflexible unmaintainable code that does not scale well as the application grows bigger. It is much simpler to define methods that pull the data (instead of pushing it) when necessary only, which can be reusable everywhere instead of just in the controllers that push the data.
 1. [Rails Helper Presenters of Model information](https://andymaleh.blogspot.com/2011/10/decoupling-views-from-controllers-in.html)
 1. No need for "View Component" libraries as Rails already supports View Components via Rails Partials and well-named Rails Helper methods. It is recommended that Partial View components accept both options of instance variables and local parameters to simplify the code further in the case of a controller action setting instance variables (by not passing any local parameters to Rails Partials in that case).
 1. Modals (aka dialogs) are displayed instantly without making web requests (to avoid hindering user experience) by including as hidden Rails Partials in web pages that need them
