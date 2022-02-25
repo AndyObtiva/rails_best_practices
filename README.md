@@ -23,3 +23,4 @@
 1. Setup a performance monitoring service like New Relic when building an application that needs to serve many customers in order to recognize the weakest links in your application and optimize them.
 1. Add database indices to all columns that are used frequently in database queries by customers, but only once you confirm that the table has a very large number of rows and performance is not fast enough without the indices given there are trade-offs in adding them. Avoid adding too many indices or any to database tables that undergo very frequent inserts/updates (much more than reads). 
 1. In some cases, you might need to denormalize/replicate database tables to optimize performance for both reads (e.g. reports) and writes (e.g. transactions).
+1. Use [Rails caching](https://guides.rubyonrails.org/caching_with_rails.html) at every level it is beneficial, but only when needed (web requests are taking more than 500ms to process).
