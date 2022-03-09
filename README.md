@@ -71,3 +71,9 @@ address && user&.update(address_id: address.id)
 ```
 
 See, how it is much shorter and simpler, let alone it does not require codebase newcomers to learn a new library that is unnecessary! 
+
+---
+
+Hit me up in [Issues](https://github.com/AndyObtiva/rails_best_practices/issues) if you have any questions about best practices you do not understand or think there are mistakes in the best practices.
+
+Feel free to submit [Pull Requests](https://github.com/AndyObtiva/rails_best_practices/pulls) if you know of best practices that are missing and would like to add to this best practices list.
