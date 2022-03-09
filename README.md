@@ -34,7 +34,7 @@
 1. Avoid overuse of [Active Record Callbacks](https://guides.rubyonrails.org/active_record_callbacks.html) by dividing and extracting their logic into meaningful Observers and mixin modules instead, considering the [Wisper](https://github.com/krisleech/wisper) gem.
 1. Avoid fashionable "monad" libraries! They are inferior to Ruby-idiomatic techniques!
 
-Bad example using dry-monad:
+**Bad example using dry-monad:**
 
 ```ruby
 def find_user(user_id)
@@ -62,7 +62,7 @@ address = yield find_address(params[:address_id])
 Maybe(user.update(address_id: address.id))
 ```
 
-Good example re-written using Ruby-idiomatic techniques:
+**Good example re-written using Ruby-idiomatic techniques:**
 
 ```ruby
 user = User.find_by(id: user_id)
