@@ -27,3 +27,42 @@
 1. Use [Rails caching](https://guides.rubyonrails.org/caching_with_rails.html) at every level it is beneficial, but only when needed (web requests are taking more than 500ms to process) as caching complicates code maintainability.
 1. Avoid overuse of [Active Record Callbacks](https://guides.rubyonrails.org/active_record_callbacks.html) by dividing and extracting their logic into meaningful Observers and mixin modules instead, considering the [Wisper](https://github.com/krisleech/wisper) gem.
 1. You neither want fat-model-skinny-controller nor skinny-model-fat-controller. Always aim at skinny-model-skinny-controller-skinny-view (yes, skinny everything, including the view too). What does that practically mean? Always refactor your code so that your classes/templates do not cross 200 lines of code. If a file grows too big whether a controller, a model, or a view, then divide and conquer it with understandable business domain model concepts (or Rails Partials/Helpers in the case of views), potentially following [GoF Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns) and [Domain Driven Design Patterns](https://en.wikipedia.org/wiki/Domain-driven_design). You can sometimes relax the 200-lines-of-code restriction a bit, but certainly not more than 500 lines and if you have a file with 1000 lines, you're clearly in the unmaintainable code danger zone.
+1. Avoid fashionable "monad" libraries! They are inferior to Ruby-idiomatic techniques!
+
+Bad example using dry-monad:
+
+```ruby
+def find_user(user_id)
+  user = User.find_by(id: user_id)
+
+  if user
+    Success(user)
+  else
+    Failure(:user_not_found)
+  end
+end
+
+def find_address(address_id)
+  address = Address.find_by(id: address_id)
+
+  if address
+    Success(address)
+  else
+    Failure(:address_not_found)
+  end
+end
+
+user = yield find_user(params[:user_id])
+address = yield find_address(params[:address_id])
+Maybe(user.update(address_id: address.id))
+```
+
+Good example re-written using Ruby-idomatic techniques:
+
+```ruby
+user = User.find_by(id: user_id)
+address = Address.find_by(id: address_id)
+address && user&.update(address_id: address.id)
+```
+
+See, how it is much shorter and simpler, let alone does not require newcomers to a codebase to learn a new library that is unnecessary!?!
