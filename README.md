@@ -62,7 +62,7 @@ address = yield find_address(params[:address_id])
 Maybe(user.update(address_id: address.id))
 ```
 
-Good example re-written using Ruby-idomatic techniques:
+Good example re-written using Ruby-idiomatic techniques:
 
 ```ruby
 user = User.find_by(id: user_id)
