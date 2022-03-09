@@ -1,4 +1,4 @@
-# Rails Best Practices
+# Andy's Rails Best Practices
 
 **Authored by Andy Maleh (Two-time RailsConf Speaker, RubyConf/MagicRuby/MountainWest RubyConf Speaker, and Fukuoka Ruby 2022 Special Award Winner)**
 
