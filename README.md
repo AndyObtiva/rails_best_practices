@@ -34,7 +34,7 @@
 1. Use [ActiveModel](https://guides.rubyonrails.org/active_model_basics.html) to model objects that do not require persistence instead of ActiveRecord. Some objects represented by Rails resources do not truly need ActiveRecord since they are transient, meaning used temporarily in a transaction to do things like send an email or perhaps produce multiple ActiveRecord models that are stored in the database. Avoid any libraries that provide typed struct support as they are not Ruby-idiomatic and if that is ever needed (for performance optimization only), you could use a statically typed language that is more suitable for that need. 
 1. [Divide and conquer your Rails Routes when they get out of hand](https://andymaleh.blogspot.com/2013/04/managing-rails-routes-when-they-get-out.html)!
 1. Avoid overuse of [Active Record Callbacks](https://guides.rubyonrails.org/active_record_callbacks.html) by dividing and extracting their logic into meaningful Observers and mixin modules instead, considering the [Wisper](https://github.com/krisleech/wisper) gem.
-1. Avoid fashionable "monad" libraries! They are inferior to Ruby-idiomatic techniques!
+1. Avoid fashionable "monad" libraries! They are extreme over-engineering and inferior to Ruby-idiomatic techniques!
 
 **Bad example using dry-monad:**
 
