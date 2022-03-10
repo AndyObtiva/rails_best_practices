@@ -1,5 +1,7 @@
 # Andy's Rails Best Practices
 
+(work in progress)
+
 **Authored by Andy Maleh (Two-time RailsConf Speaker, RubyConf/MagicRuby/MountainWest RubyConf Speaker, and Fukuoka Ruby 2022 Special Award Winner)**
 
 ## Software Architecture:
