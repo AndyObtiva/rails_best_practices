@@ -72,7 +72,7 @@ address = Address.find_by(id: address_id)
 address && user&.update(address_id: address.id)
 ```
 
-See, how it is much shorter and simpler, let alone it does not require codebase newcomers to learn a new library that is unnecessary! 
+See, how it is much shorter and simpler, let alone it does not require codebase newcomers to learn a new library that is unnecessary! I realize that hypers of monads like to claim big risks about the dangers of working with `nil` values and like to cite famous quotes like "null is the billion dollar mistake", but such sayings only make for fancy buzz and hype while in practical real-world scenarios, the risks never truly materialize assuming good software engineering habits like automated testing and good QA. Usually, people who find working with `nil` a very big problem are either unskilled or uneducated. They construct extremely elaborate and complicated techniques to get around their own shortcomings instead of actually developing their skills and truly overcoming their shortcomings. It's like a bike rider who failed to ride his bike and attached 2 third wheels instead of developing his skills at riding two wheels only. Be a pragmatic skilled software engineer instead!
 
 ---
 
