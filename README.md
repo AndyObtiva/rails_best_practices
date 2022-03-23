@@ -77,7 +77,7 @@ See, how it is much shorter and simpler, let alone it does not require codebase 
 
 ## Team Process:
 
-- Avoid dividing the work between backend and frontend. All software engineers must be full-stack developers in order to be maximally effective at delivering value to customers. Developers who only know the backend or the frontend cannot possibly think of the entire value being delivered to customers end-to-end, so their work is always inferior. Every software engineer must be implementing features in vertical slices that cut through from the top layer of GUI (graphical user interface) to the bottom layer of the database.
+1. Avoid dividing the work between backend and frontend. All software engineers must be full-stack developers in order to be maximally effective at delivering value to customers. Developers who only know the backend or the frontend cannot possibly think of the entire value being delivered to customers end-to-end, so their work is always inferior. Every software engineer must be implementing features in vertical slices that cut through from the top layer of GUI (graphical user interface) to the bottom layer of the database.
 
 ---
 
