@@ -75,6 +75,10 @@ address && user&.update(address_id: address.id)
 
 See, how it is much shorter and simpler, let alone it does not require codebase newcomers to learn a new library that is unnecessary! I realize that hypers of monads like to claim big risks about the dangers of working with `nil` values and like to cite famous quotes like "null is the billion dollar mistake", but such sayings only make for fancy buzz and hype while in practical real-world scenarios, the risks never truly materialize assuming good software engineering habits like automated testing and good QA. Usually, people who find working with `nil` a very big problem are either unskilled or uneducated. They construct extremely elaborate and complicated techniques to get around their own shortcomings instead of actually developing their skills and truly overcoming their shortcomings (using React is another example of that sort of crutch for the unskilled and uneducated). It's like a bicycle learner who failed to ride his bike and attached 2 extra side wheels instead of developing his skills at riding two wheels only. Be a pragmatic skilled software engineer instead!
 
+## Team Process:
+
+- Avoid dividing the work between backend and frontend. All software engineers must be full-stack developers in order to be maximally effective at delivering value to customers. Developers who only know the backend or the frontend cannot possibly think of the entire value being delivered to customers end-to-end, so their work is always inferior. Every software engineer must be implementing features in vertical slices that cut through from the top layer of GUI (graphical user interface) to the bottom layer of the database.
+
 ---
 
 Hit me up in [Issues](https://github.com/AndyObtiva/rails_best_practices/issues) if you have any questions about best practices you do not understand or think there are mistakes in the best practices.
